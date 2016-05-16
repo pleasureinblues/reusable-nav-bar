@@ -1,0 +1,121 @@
+
+body { background-color:#000;}
+
+/*nav menu*/
+#drop_nav {
+  height: 45px;
+  position: absolute;
+  right: 0;
+  z-index: 11;
+}
+
+#drop_nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#drop_nav ul li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+}
+
+/* If you wish to have different width of menus, assign unique id to each "drop_nav ul li" and style accordingly. */
+#drop_nav ul li {
+  width: 105px;
+}
+
+#drop_nav ul li a.toplevel {
+  color: #FFF;
+  display: block;
+  /* float: left; */
+  font-family: RalewayLight, Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  letter-spacing: 1px;
+  line-height: 33px;
+  padding: 0 0 12px;
+}
+
+#drop_nav ul li.drop > .menu_main > a.toplevel:hover,
+#drop_nav ul li.drop > a.toplevel:hover,
+#drop_nav ul li.drop:hover > .menu_main > a.toplevel,
+#drop_nav ul li.drop:hover > a.toplevel {
+  /* border-bottom: 5px solid #B0BC22; */
+  color: #B0BC22;
+  font-family: RalewayMedium, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+
+/* subnav */
+#drop_nav .menu_main {
+  position: relative;
+}
+
+#drop_nav ul li.drop .menu_main:hover {
+  z-index: 11;
+}
+
+#drop_nav .spacer {
+  height: 1px;
+}
+#drop_nav ul li.drop .menu_main .second_menu {
+  background: transparent url(img/bg_gray_trans.png) 0 0 repeat;
+  display: none;
+  left: 0;
+  margin-left: 0px;
+  padding: 8px 0 16px;
+  position: absolute;
+  top: 45px;
+  width: 155px;
+}
+#drop_nav ul li.last-child.drop .menu_main .second_menu {
+  left: auto;
+  right: 0;
+}
+#drop_nav ul li.drop .menu_main:hover .second_menu {
+  display: block;
+}
+
+#drop_nav ul li.drop ul {
+}
+
+#drop_nav ul li.drop:hover ul {
+}
+
+#drop_nav ul li ul li {
+  float: none;
+  background: none;
+  text-align: left;
+}
+
+#drop_nav ul li ul li a {
+  /* color: #b0bc22; */
+  color: #cbcbcb;
+  display: block;
+  float: none;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+#drop_nav ul li ul li a:link,
+#drop_nav ul li ul li a:active,
+#drop_nav ul li ul li a:visited,
+#drop_nav ul li.drop:hover li a:visited,
+#drop_nav ul li.drop:hover li a:link {
+  font-size: 15px;
+  font-family: RalewayMedium, Helvetica, Arial, sans-serif;
+}
+
+#drop_nav ul li ul li:hover a,
+#drop_nav ul li ul li a:hover {
+  background: #B0BC22 none;
+  color: #fff;
+  text-decoration: none;
+}
+
+#drop_nav ul li.drop:hover ul li.last {
+}
